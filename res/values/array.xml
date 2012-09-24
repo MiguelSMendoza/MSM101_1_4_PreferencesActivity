@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="listmenu">
+        <item>Edit or View</item>
+        <item>Delete</item>
+    </array>
+
+    <string-array name="updateInterval">
+        <item name="300000">Every 5 minutes</item>
+        <item name="1800000">Every 30 minutes</item>
+        <item name="3600000">Every 1 hour</item>
+        <item name="1800000">Every 5 hours</item>
+        <item name="86400000">Every 24 hours</item>
+    </string-array>
+    <string-array name="updateIntervalValues">
+        <item name="300000">300000</item>
+        <item name="1800000">1800000</item>
+        <item name="3600000">3600000</item>
+        <item name="18000000">18000000</item>
+        <item name="86400000">86400000</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="dropbox"
+        android:title="DropBox" >
+        <PreferenceScreen
+            android:key="account"
+            android:summary="Manage your Dropbox Account Settings"
+            android:title="Account Settings" >
+        </PreferenceScreen>
+
+        <EditTextPreference
+            android:defaultValue="folder/folder2"
+            android:dialogMessage="Provide a folder name"
+            android:dialogTitle="Remote Folder"
+            android:key="DBFolder"
+            android:summary="Define the remote folder of your Dropbox account where you want to store your notes"
+            android:title="Remote Folder" />
+
+        <CheckBoxPreference
+            android:key="AutomaticSync"
+            android:summary="Automatically sync notes with DropBox"
+            android:title="Auto-Sync" />
+
+        <ListPreference
+            android:defaultValue="300000"
+            android:dependency="AutomaticSync"
+            android:entries="@array/updateInterval"
+            android:entryValues="@array/updateIntervalValues"
+            android:key="SyncPeriod"
+            android:summary="Define how often synchronization will be performed"
+            android:title="Synchronization Period" />
+
+        <CheckBoxPreference
+            android:dependency="AutomaticSync"
+            android:key="Notification"
+            android:summary="Notify when sync ends"
+            android:title="Notifications" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="photo_notes"
+        android:title="Photo Notes" >
+        <CheckBoxPreference
+            android:key="PhotoDefaultName"
+            android:summary="Let App choose photo title for you or not"
+            android:title="Use Default Name" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
